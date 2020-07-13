@@ -7,7 +7,7 @@ import { User } from '../user.model';
   styleUrls: ['./users.page.scss'],
 })
 export class UsersPage implements OnInit {
-  user:User = new User();
+  users:User;
 
   constructor(private usersService:UsersService) {}
 
@@ -18,7 +18,8 @@ export class UsersPage implements OnInit {
   public getUsers(): void{
     this.usersService.getUsers().subscribe(
       (response:any) => {
-        console.log(response);
+        //console.log(response);
+        this.users = response.users;
       }
     );
   }
