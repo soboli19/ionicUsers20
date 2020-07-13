@@ -15,10 +15,12 @@ export class LoginPage implements OnInit {
     private authService: AuthService
   ) {}
 
-  ngOnInit() {
+  ngOnInit() {}
 
-    this.user.username = 'testuser5';
-    this.user.password = 'password';
+    public onSubmit(): void{
+    //this.user.username = 'testuser5';
+    //this.user.password = 'password';
+    
     this.authService.logIn(this.user).subscribe(
       (response:any) => {
        console.log(response);
