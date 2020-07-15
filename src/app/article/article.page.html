@@ -21,8 +21,9 @@
         </ion-card-header>
         
         <ion-list>
-          <ion-item>{{ article.description  }}</ion-item>
-          <ion-item>{{ article.keywords  }}</ion-item>
+          <ion-item>Description: {{ article.description  }}</ion-item>
+          <ion-item>Created: {{ article.created  }}</ion-item>
+          <ion-item>Keywords: {{ article.keywords  }}</ion-item>
           <ion-item>{{ article.body  }}</ion-item>
         </ion-list>
     
@@ -35,7 +36,7 @@
     
         <ion-fab-list side="start" *ngIf="article">
     
-          <ion-fab-button color="light" [routerLink]="['/article-edit', article._id]">
+          <ion-fab-button color="light" [routerLink]="['/article-edit', article._id]"> 
             <ion-icon name="create"></ion-icon>
           </ion-fab-button>
     

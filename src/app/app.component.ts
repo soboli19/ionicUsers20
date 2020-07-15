@@ -35,7 +35,7 @@ export class AppComponent  {
     {
       title: 'Articles',
       url: '/articles',
-      icon: 'newspaper'
+      icon: 'reader'
       },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
