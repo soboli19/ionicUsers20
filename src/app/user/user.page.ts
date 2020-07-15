@@ -35,4 +35,12 @@ export class UserPage implements OnInit {
     );
   }
 
+  deleteUser(id:string): void {
+    if (confirm("Are you sure to delete " + this.user.username)) {
+      this.usersService.deleteUser(id).subscribe(
+        () => { this.router.navigate(['/users']) }
+      );
+    }
+  }
+
 }
